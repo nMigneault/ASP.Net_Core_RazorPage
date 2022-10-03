@@ -1,6 +1,7 @@
 ASP.Net Core avec Razor page
 ============================
-Gestion de commandes EF
+Gestion de commandes avec l'utilisation de  Entity Framework.
+
 Projet scolaire réalisé de façon individuelle dans le cadre d'une évaluation, durée 2h
 
 Spécifications
