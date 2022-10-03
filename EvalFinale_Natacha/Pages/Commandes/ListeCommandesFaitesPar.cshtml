@@ -1,0 +1,84 @@
+﻿@page
+@model EvalFinale_Natacha.Pages.Commandes.ListeCommandesFaitesParModel
+
+@{
+    ViewData["Title"] = "ListeCommandesFaitesPar";
+}
+
+<h1>ListeCommandesFaitesPar</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CommandesFaitesPar[0].ClientID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommandesFaitesPar[0].EmployeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommandesFaitesPar[0].DateCommande)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommandesFaitesPar[0].DateRequise)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommandesFaitesPar[0].DateEnvoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommandesFaitesPar[0].AdresseEnvoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommandesFaitesPar[0].VilleEnvoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommandesFaitesPar[0].CodePostalEnvoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommandesFaitesPar[0].PaysEnvoi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.CommandesFaitesPar) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCommande)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateRequise)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateEnvoi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresseEnvoi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VilleEnvoi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodePostalEnvoi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaysEnvoi)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CommandeID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CommandeID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CommandeID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
